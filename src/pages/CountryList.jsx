@@ -8,7 +8,7 @@ const CountryList = () => {
             <h2>Hello Country list</h2>
             {countries.map(c => (
                 <div key={c.id}>
-                    <Link to={c}>{c.name}</Link>
+                    <Link to={`/country/${c.id}`}>{c.name}{<br/>}{<img src={c.img}/>}{<hr/>}</Link>
                 </div>
             ))}
         </>

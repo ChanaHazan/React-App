@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { Provider } from 'react-redux'
 import './App.css'
+import Input from './components/Input'
+import Messege from './components/Messege'
+import store from './state/store'
+
 
 function App() {
-  
 
   return (
     <>
-    <h1>hello app!</h1>
+      <Provider store={store}>
+        <Input/>
+        <Messege/>
+      </Provider>
     </>
   )
 }
